@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 import java.util.Properties;
 
 /**
- * Класс для поиска полей помеченных аннотацией AutoInjectable, используя рефлексию
+ * class for injecting
  */
 public class Injector {
 
@@ -19,8 +19,8 @@ public class Injector {
     }
 
     /**
-     * Параметризированный метод, ищет и инициализирует поля передаваемого объекта класса
-     * @param object - передаваемый объект класса
+     * initialize field for class
+     * @param object - instance of provided class
      */
     public <T> void inject(T object) throws IllegalAccessException, InstantiationException {
         Class objectClass = object.getClass();
